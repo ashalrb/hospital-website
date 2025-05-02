@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Himalayan Hospital</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ </head>
+ <body>
+     <header>
+         <div class="logo">
+             <i class="fas fa-heartbeat"></i>
+             <h1>Himalayan Hospital</h1>
+             <p>Your Health, Our Priority</p>
+         </div>
+         <nav>
+             <ul>
+                 <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                 <li><a href="#departments"><i class="fas fa-hospital"></i> Departments</a></li>
+                 <li><a href="#doctors"><i class="fas fa-user-md"></i> Doctors</a></li>
+                 <li><a href="#booking"><i class="fas fa-calendar-check"></i> Book Appointment</a></li>
+                 <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+             </ul>
+         </nav>
+     </header>
+ 
+     <main>
+         <section id="hero">
+             <div class="hero-content">
+                 <h1>World-Class Healthcare</h1>
+                 <p>Providing exceptional medical care with cutting-edge technology</p>
+                 <a href="#booking" class="cta-button">Book an Appointment</a>
+             </div>
+         </section>
+ 
+         <section id="departments">
+             <h2><i class="fas fa-hospital-alt"></i> Our Departments</h2>
+             <div class="department-grid">
+                 <div class="department-card" onclick="showDoctors('general')">
+                     <i class="fas fa-stethoscope"></i>
+                     <h3>General Medicine</h3>
+                     <p>Comprehensive healthcare for all ages</p>
+                 </div>
+                 <div class="department-card" onclick="showDoctors('gynaecology')">
+                     <i class="fas fa-female"></i>
+                     <h3>Gynaecology</h3>
+                     <p>Specialized care for women's health</p>
+                 </div>
+                 <div class="department-card" onclick="showDoctors('radiology')">
+                     <i class="fas fa-x-ray"></i>
+                     <h3>Radiology</h3>
+                     <p>Advanced diagnostic imaging</p>
+                 </div>
+                 <div class="department-card" onclick="showDoctors('dermatology')">
+                     <i class="fas fa-allergies"></i>
+                     <h3>Dermatology</h3>
+                     <p>Expert skin care treatment</p>
+                 </div>
+                 <div class="department-card" onclick="showDoctors('neurology')">
+                     <i class="fas fa-brain"></i>
+                     <h3>Neurology</h3>
+                     <p>Specialized neurological care</p>
+                 </div>
+             </div>
+         </section>
+ 
+         <section id="doctors" class="hidden">
+             <h2><i class="fas fa-user-md"></i> Our Doctors</h2>
+             <div id="doctors-list" class="doctors-grid"></div>
+         </section>
+ 
+         <section id="booking">
+             <h2><i class="fas fa-calendar-check"></i> Book an Appointment</h2>
+             <form id="booking-form">
+                 <div class="form-group">
+                     <input type="text" id="name" required>
+                     <label for="name">Full Name</label>
+                 </div>
+                 <div class="form-group">
+                     <input type="email" id="email" required>
+                     <label for="email">Email</label>
+                 </div>
+                 <div class="form-group">
+                     <input type="tel" id="phone" required>
+                     <label for="phone">Phone Number</label>
+                 </div>
+                 <div class="form-group">
+                     <input type="date" id="dob" required>
+                     <label for="dob">Date of Birth</label>
+                 </div>
+                 <div class="form-group">
+                     <select id="department" required>
+                         <option value="">Select Department</option>
+                         <option value="general">General Medicine</option>
+                         <option value="gynaecology">Gynaecology</option>
+                         <option value="radiology">Radiology</option>
+                         <option value="dermatology">Dermatology</option>
+                         <option value="neurology">Neurology</option>
+                     </select>
+                 </div>
+                 <div class="form-group">
+                     <textarea id="symptoms" required></textarea>
+                     <label for="symptoms">Symptoms</label>
+                 </div>
+                 <div class="form-group">
+                     <select id="patient-type" required>
+                         <option value="">Select Patient Type</option>
+                         <option value="ip">In-Patient</option>
+                         <option value="op">Out-Patient</option>
+                     </select>
+                 </div>
+                 <div id="room-selection" class="form-group hidden">
+                     <select id="room-type">
+                         <option value="general">General Ward</option>
+                         <option value="semi">Semi-Private Room</option>
+                         <option value="private">Private Room</option>
+                     </select>
+                 </div>
+                 <button type="submit">Book Appointment</button>
+             </form>
+         </section>
+ 
+         <section id="contact">
+             <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+             <div class="contact-grid">
+                 <div class="contact-info">
+                     <div class="info-item">
+                         <i class="fas fa-map-marker-alt"></i>
+                         <p>123 Health Street, Medical City</p>
+                     </div>
+                     <div class="info-item">
+                         <i class="fas fa-phone"></i>
+                         <p>+61 4130 00111</p>
+                     </div>
+                     <div class="info-item">
+                         <i class="fas fa-envelope"></i>
+                         <p>info@himalayan.com</p>
+                     </div>
+                 </div>
+                 <div class="contact-map">
+                     <iframe src="https://www.google.com/maps/embed?pb=!" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                 </div>
+             </div>
+         </section>
+     </main>
+ 
+     <footer>
+         <div class="footer-content">
+             <div class="footer-section">
+                 <h3>Quick Links</h3>
+                 <ul>
+                     <li><a href="#home">Home</a></li>
+                     <li><a href="#departments">Departments</a></li>
+                     <li><a href="#doctors">Doctors</a></li>
+                     <li><a href="#booking">Appointments</a></li>
+                 </ul>
+             </div>
+             <div class="footer-section">
+                 <h3>Emergency</h3>
+                 <p>24/7 Emergency Services</p>
+                 <p class="emergency-number">1-800-HIMALAYAN</p>
+             </div>
+             <div class="footer-section">
+                 <h3>Follow Us</h3>
+                 <div class="social-links">
+                     <a href="#"><i class="fab fa-facebook"></i></a>
+                     <a href="#"><i class="fab fa-twitter"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-linkedin"></i></a>
+                 </div>
+             </div>
+         </div>
+         <div class="footer-bottom">
+             <p>&copy; 2025 Himalayan Hospital. All rights reserved.</p>
+         </div>
+     </footer>
+ 
+     <script src="script.js"></script>
+ </body>
+ </html>
